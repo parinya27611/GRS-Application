@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/close"
+                    android:layout_width="25dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/arrow"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_app"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="15dp"
+                    android:text="@string/txt_nameapp"
+                    android:textSize="33sp" />
+
+            </LinearLayout>
+
+        </android.support.design.widget.AppBarLayout>
+    </LinearLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right|center_vertical"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints,RtlHardcoded"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp">
+
+            <Button
+                android:id="@+id/btn_mylocation"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="100dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/mylocation"
+                android:onClick="onMylocation" />
+
+            <Button
+                android:id="@+id/btn_zoomin"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/plus"
+                android:onClick="zoommap" />
+
+            <Button
+                android:id="@+id/btn_zoomout"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/delete"
+                android:onClick="zoommap" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom|center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/txt_lat"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/txt_lat"
+                android:inputType="textPostalAddress"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="@string/txt_0"
+                tools:ignore="NestedWeights" />
+
+            <AutoCompleteTextView
+                android:id="@+id/txt_email"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:hint="@string/text_Fname"
+                android:inputType="textWebEmailAddress"
+                android:maxLines="1"
+                android:singleLine="true"
+                tools:ignore="NestedWeights" />
+
+
+            <Button
+                android:id="@+id/btn_sentlatlon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_send"
+                android:textAppearance="@style/MyFont"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                tools:ignore="ButtonStyle" />
+
+            <AutoCompleteTextView
+                android:id="@+id/txt_lon"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/txt_lon"
+                android:inputType="textPostalAddress"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="@string/txt_0"
+                tools:ignore="NestedWeights" />
+
+            <AutoCompleteTextView
+                android:id="@+id/txt_lon1"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:hint="@string/text_Fname"
+                android:inputType="textPostalAddress"
+                android:maxLines="1"
+                android:singleLine="true"
+                tools:ignore="NestedWeights" />
+
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+
+
+</LinearLayout>

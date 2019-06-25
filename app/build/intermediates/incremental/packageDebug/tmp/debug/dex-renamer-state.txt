@@ -1,0 +1,7 @@
+#Tue Feb 19 15:07:24 ICT 2019
+base.0=E\:\\Program Files (x86)\\GRS\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out
+path.1=classes.dex
+renamed.1=classes2.dex
+path.0=classes.dex
+renamed.0=classes.dex
+base.1=E\:\\Program Files (x86)\\GRS\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out
